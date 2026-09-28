@@ -1,0 +1,20 @@
+{
+  "name": "mboa-reels",
+  "version": "0.1.0",
+  "description": "Mboa Reels — pay-per-episode streaming platform",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --env-file-if-exists=.env --disable-warning=ExperimentalWarning --watch server/index.js",
+    "samples": "node scripts/fetch-samples.js",
+    "reset": "node --disable-warning=ExperimentalWarning scripts/reset.js",
+    "test": "node --disable-warning=ExperimentalWarning --test 'tests/**/*.test.js'"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
